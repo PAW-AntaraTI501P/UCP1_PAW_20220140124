@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<h1>Daftar Buku Perpustakaan</h1>
+<a href="/buku/tambah">Tambah Buku Baru</a>
+<br><br>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Judul</th>
+            <th>Penulis</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% allBuku.forEach(buku => { %>
+            <tr>
+                <td><%= buku.judul %></td>
+                <td><%= buku.penulis %></td>
+                <td>
+                    <a href="/buku/edit/<%= buku.id %>">Edit</a>
+                    <form action="/buku/<%= buku.id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit">Hapus</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<%- include('partials/footer') %>
