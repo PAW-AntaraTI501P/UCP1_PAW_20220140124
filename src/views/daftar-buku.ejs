@@ -1,30 +1,39 @@
 <%- include('partials/header') %>
 
-<h1>Daftar Buku Perpustakaan</h1>
-<a href="/buku/tambah">Tambah Buku Baru</a>
-<br><br>
-<table border="1">
-    <thead>
-        <tr>
-            <th>Judul</th>
-            <th>Penulis</th>
-            <th>Aksi</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% allBuku.forEach(buku => { %>
+<div class="container">
+
+    <h1>Daftar Buku Perpustakaan</h1>
+
+    <a href="/buku/tambah" class="btn btn-edit">Tambah Buku Baru</a>
+    
+    <table>
+        <thead>
             <tr>
-                <td><%= buku.judul %></td>
-                <td><%= buku.penulis %></td>
-                <td>
-                    <a href="/buku/edit/<%= buku.id %>">Edit</a>
-                    <form action="/buku/<%= buku.id %>?_method=DELETE" method="POST" style="display:inline;">
-                        <button type="submit">Hapus</button>
-                    </form>
-                </td>
+                <th>Judul</th>
+                <th>Penulis</th>
+                <th>Penerbit</th>
+                <th>Tahun</th>
+                <th>Aksi</th>
             </tr>
-        <% }) %>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <% allBuku.forEach(buku => { %>
+                <tr>
+                    <td><%= buku.judul %></td>
+                    <td><%= buku.penulis %></td>
+                    <td><%= buku.penerbit %></td>
+                    <td><%= buku.tahun_terbit %></td>
+                    <td>
+                        <a href="/buku/edit/<%= buku.id %>" class="btn btn-edit">Edit</a>
+                        <form action="/buku/<%= buku.id %>?_method=DELETE" method="POST" style="display:inline;">
+                            <button type="submit" class="btn btn-delete">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+</div>
 
 <%- include('partials/footer') %>
