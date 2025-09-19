@@ -8,5 +8,6 @@ Setelah Tambah dan Hapus
 Database
 <img width="1210" height="650" alt="image" src="https://github.com/user-attachments/assets/c23ac43b-806b-4a59-87d3-97e68a68ad7d" />
 Database setelah Tambah dan Hapus
-<img width="1912" height="878" alt="image" src="https://github.com/user-attachments/assets/2838fd36-4b42-44f4-8da4-ee7209f30b98" />
+<img width="1165" height="727" alt="image" src="https://github.com/user-attachments/assets/1bd65c59-710b-483f-b83d-0030b18b910c" />
+
 
